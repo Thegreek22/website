@@ -57,4 +57,12 @@ class User::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  def configure_sign_up_params
+     devise_parameter_sanitizer.for(:sign_up) << :name, :twitter_url, :email, :password, :password_confirmation, :twitter, :face_url, :face,  :photo
+   end
+
+   def configure_account_update_params
+     devise_parameter_sanitizer.for(:account_update) << :name, :twitter_url, :email, :password, :password_confirmation, :twitter, :face_url, :face,  :photo
+   end
 end
