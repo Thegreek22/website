@@ -13,6 +13,15 @@ ActiveAdmin.register Post do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+permit_params :name, :content, :image
 
+form(:html => { :multipart => true }) do |f|
+      f.inputs "Details" do
+      f.input :name
+      f.input :content
+      f.input :image
+    end
+    f.actions
+  end
 
 end

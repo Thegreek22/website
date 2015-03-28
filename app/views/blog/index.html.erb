@@ -1,0 +1,22 @@
+<h1>Todos los blogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @blogs.each do |blogs| %>
+      <tr>
+        <td><%= blogs.name %></td>
+        <td><%= blogs.content %></td>
+        <td><%= link_to "Profile", controller: "blog", action: "show", id: blogs %></td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
