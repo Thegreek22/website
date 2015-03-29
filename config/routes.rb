@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   # Rails.application.routes.draw do
   get 'blog/index'
-
+  get 'blog/count' 
   get 'blog/show'
 
   #       devise_for :users, controllers: {
