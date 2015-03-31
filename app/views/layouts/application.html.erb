@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!DOCTYPE html>
+  <html >
+  <head>
+    <title>Bambú mobile</title>
+    <%= csrf_meta_tags %>
+    <meta name='Title' content='Bambú Mobile'>
+    <meta name='description' content='Empresa de desarrollo de software de alto impacto con una conciencia de libertad para mejorar la forma en la que se usan las aplicaciones' %>
+    <meta name='keywords' content='Desarrollo Software Conciente Innovacion Alto Impacto Latinoamerica México'%>
+    <meta name="author" content="okler.net">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= favicon_link_tag 'http://media.bambu-mobile.com/favicon.ico' %>
+    <%= stylesheet_link_tag params[:controller], 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track' => true %>
+
+  <%= yield %>
+
+  </body>
+</html>

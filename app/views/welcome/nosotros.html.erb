@@ -1,0 +1,312 @@
+<%= render "welcome/header" %>
+
+			<div role="main" class="main">
+
+				<section class="page-top">
+					<div class="slider-container">
+						<div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 200}'>
+							<ul>
+								<li data-transition="fade" data-slotamount="13" data-masterspeed="300" >
+									<%= image_tag src="welcome/header-default-bg.jpg", :"data-bgposition"=>"left top", :"data-bgfit"=>"cover", :"data-bgrepeat"=>"no-repeat" %>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-top-info container">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="breadcrumb">
+									<li><a href="www.bambu-mobile.com">Inicio</a></li>
+									<li class="active">Nostros</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<h2>Acerca de nosotros</h2>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+
+					<div class="row center">
+						<div class="col-md-12">
+							<h2 class="short word-rotator-title"><strong>Bambú Mobile</strong> es la nueva forma de <strong class="inverted" data-appear-animation="bounceIn">
+									<span class="word-rotate" data-plugin-options='{"delay": 2000}'>
+										<span class="word-rotate-items">
+											<span>mejorar</span>
+											<span>impactar</span>
+											<span>avanzar</span>
+										</span>
+									</span>
+								</strong>
+							</h2>
+							<p class="featured lead">
+								<strong>Nuestra misión:</strong> Ayudar a generar una consciencia  tecnológica  a través  del desarrollo de software  y hardware de alto impacto, para resolver necesidades reales de la sociedad, empresas y organizaciones
+								<br>
+								<strong>Nuestra visión:</strong> Buscamos ser la empresa diferenciadora en el desarrollo de software y tecnologías de Alto Impacto
+							</p>
+						</div>
+					</div>
+
+					<hr class="tall" />
+				</div>
+
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="feature-box secundary">
+										<div class="feature-box-icon">
+											<i class="fa fa-mobile"></i>
+										</div>
+										<div class="feature-box-info">
+											<h4 class="shorter">Android / IOS</h4>
+											<p class="tall">La plataforma no debe ser un impedimento para lograr nuestras metas, desarollamos software movil aprovechando al máximo la capacidad de cada dispositivo</p>
+										</div>
+									</div>
+									<div class="feature-box secundary">
+										<div class="feature-box-icon">
+											<i class="fa fa-file"></i>
+										</div>
+										<div class="feature-box-info">
+											<h4 class="shorter">HTML5 / CSS3 / JS</h4>
+											<p class="tall">Usamos y dominamo, las herramientas mas actuales de diseño web, y nunca dejamos de actualizarnos y mejorar</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="feature-box secundary">
+										<div class="feature-box-icon">
+											<i class="fa fa-film"></i>
+										</div>
+										<div class="feature-box-info">
+											<h4 class="shorter">Sliders</h4>
+											<p class="tall">Las aplicaciones no tienen por que solo ser funcionales, tambien pueden verse bien <br> <br> <br></p>
+										</div>
+									</div>
+									<div class="feature-box secundary">
+										<div class="feature-box-icon">
+											<i class="fa fa-server"></i>
+										</div>
+										<div class="feature-box-info">
+											<h4 class="shorter">Back End</h4>
+											<p class="tall">Administramos toda la infraestructura de las aplicaciones, desde un simple boton hasta un servicio en la nube</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="progress-bars">
+										<div class="progress-label">
+											<span>Móvil</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-primary" data-appear-progress-animation="100%">
+												<span class="progress-bar-tooltip">100%</span>
+											</div>
+										</div>
+										<div class="progress-label">
+											<span>HTML / CSS</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-primary" data-appear-progress-animation="95%" data-appear-animation-delay="300">
+												<span class="progress-bar-tooltip">95%</span>
+											</div>
+										</div>
+										<div class="progress-label">
+											<span>Diseño</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-primary" data-appear-progress-animation="75%" data-appear-animation-delay="600">
+												<span class="progress-bar-tooltip">75%</span>
+											</div>
+										</div>
+										<div class="progress-label">
+											<span>Back End</span>
+										</div>
+										<div class="progress">
+											<div class="progress-bar progress-bar-primary" data-appear-progress-animation="90%" data-appear-animation-delay="900">
+												<span class="progress-bar-tooltip">90%</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<%= render "welcome/banda" %>
+
+				<section class="video" data-video-path="http://media.bambu-mobile.com/video/light/light" data-plugin-video-background data-plugin-options='{"overlay": false, "posterType": "jpg", "position": "50% 50%"}'>
+					<div class="container">
+						<div class="row center">
+							<div class="col-md-12">
+
+								<div class="row">
+									<div class="owl-carousel" data-plugin-options='{"items": 1}'>
+										<div>
+											<blockquote>
+												<p><i class="fa fa-quote-left"></i> La tecnología no es más que la perversión de la humanidad, al menos que tenga un cambio en la humanidad</p>
+												<span>- Nikola Tesla</span>
+											</blockquote>
+										</div>
+										<div>
+											<blockquote>
+												<p><i class="fa fa-quote-left"></i> La tecnología no sólo se trata de dispositivos inteligentes, se trata de la humanidad, de su destino</p>
+												<span>- Bambú Mobile</span>
+											</blockquote>
+										</div>
+										<div>
+											<blockquote>
+												<p><i class="fa fa-quote-left"></i> Sólo podemos ver un poco del futuro, pero lo suficiente para saber que hay mucho por hacer</p>
+												<span>- Alan Mathison Turing</span>
+											</blockquote>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 center">
+							<h2>Bambú Mobile esta conformado por un <strong>gran equipo</strong> de excelentes desarrolladores</h2>
+							<p class="lead">Cada miembro del equipo representa una pequeña parte de un gran empresa, expertos en su campo contamos con mentes brillantes que no solo buscan desarrollar si no mejorar</p>
+							<p>Crecemos de manera constante y siempre positiva, con una vista hacia el futuro dando todo lo que tenemos de nuestra parte para mejorar dia con dia, no solo se trata de producir o vender, se trata de impulsar mejorar e innovar, nos encanta lo que hacemos y hacemos solo lo mejor</p>
+						</div>
+					</div>
+					<hr class="tall" />
+				</div>
+
+				<div class="container">
+					<div class="row" id="team">
+						<div class="col-md-12">
+
+							<div class="row">
+
+								<ul class="team-list">
+									<li class="col-md-3 col-sm-6 col-xs-12">
+										<div class="team-item thumbnail">
+											<a href="about-me.html" class="thumb-info team">
+												<span class="thumb-info-image">
+													<img alt="" height="270" src="img/team/team-1.jpg">
+												</span>
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">John Doe</span>
+													<span class="thumb-info-type">CEO</span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-left"><em>View</em></span>
+													<span class="thumb-info-action-right"><em><i class="fa fa-plus"></i> Details</em></span>
+												</span>
+											</a>
+											<span class="thumb-info-caption">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
+												<span class="thumb-info-social-icons">
+													<a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												</span>
+											</span>
+										</div>
+									</li>
+									<li class="col-md-3 col-sm-6 col-xs-12">
+										<div class="team-item thumbnail">
+											<a href="about-me.html" class="thumb-info team">
+												<span class="thumb-info-image">
+													<img alt="" height="270" src="img/team/team-2.jpg">
+												</span>
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Jessica Doe</span>
+													<span class="thumb-info-type">Marketing</span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-left"><em>View</em></span>
+													<span class="thumb-info-action-right"><em><i class="fa fa-plus"></i> Details</em></span>
+												</span>
+											</a>
+											<span class="thumb-info-caption">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
+												<span class="thumb-info-social-icons">
+													<a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												</span>
+											</span>
+										</div>
+									</li>
+									<li class="col-md-3 col-sm-6 col-xs-12">
+										<div class="team-item thumbnail">
+											<a href="about-me.html" class="thumb-info team">
+												<span class="thumb-info-image">
+													<img alt="" height="270" src="img/team/team-3.jpg">
+												</span>
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Rick Edward Doe</span>
+													<span class="thumb-info-type">Developer</span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-left"><em>View</em></span>
+													<span class="thumb-info-action-right"><em><i class="fa fa-plus"></i> Details</em></span>
+												</span>
+											</a>
+											<span class="thumb-info-caption">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
+												<span class="thumb-info-social-icons">
+													<a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												</span>
+											</span>
+										</div>
+									</li>
+									<li class="col-md-3 col-sm-6 col-xs-12">
+										<div class="team-item thumbnail">
+											<a href="about-me.html" class="thumb-info team">
+												<span class="thumb-info-image">
+													<img alt="" height="270" src="img/team/team-4.jpg">
+												</span>
+												<span class="thumb-info-title">
+													<span class="thumb-info-inner">Melinda Wolosky</span>
+													<span class="thumb-info-type">Design</span>
+												</span>
+												<span class="thumb-info-action">
+													<span class="thumb-info-action-left"><em>View</em></span>
+													<span class="thumb-info-action-right"><em><i class="fa fa-plus"></i> Details</em></span>
+												</span>
+											</a>
+											<span class="thumb-info-caption">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac ligula mi, non suscipitaccumsan.</p>
+												<span class="thumb-info-social-icons">
+													<a rel="tooltip" data-placement="bottom" target="_blank" href="http://www.facebook.com" data-original-title="Facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.twitter.com" data-original-title="Twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+													<a rel="tooltip" data-placement="bottom" href="http://www.linkedin.com" data-original-title="Linkedin"><i class="fa fa-linkedin"></i><span>Linkedin</span></a>
+												</span>
+											</span>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<%=render "welcome/nuevo" %>
+
+			</div>
+
+			<%=render "welcome/footer"%>
+		</div>
+
+		<%=render "welcome/scripts"%>

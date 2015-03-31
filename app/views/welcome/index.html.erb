@@ -1,0 +1,207 @@
+<%= render "welcome/header" %>
+  <div role="main" class="main">
+    <section class="home-top clean">
+      <div class="slider-container">
+        <div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 570}'>
+          <ul>
+            <li data-slotamount="7" data-masterspeed="1000" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7">
+              <%= image_tag src="welcome/video/light.jpg", :alt=>"light", :"data-bgposition"=>"center center", :"data-bgfit"=>"cover", :"data-bgrepeat"=>"no-repeat" %>
+
+              <div class="tp-caption tp-fade fadeout fullscreenvideo"
+                data-x="0"
+                data-y="0"
+                data-speed="1000"
+                data-start="100"
+                data-easing="Power4.easeOut"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.1"
+                data-endspeed="1500"
+                data-endeasing="Power4.easeIn"
+                data-autoplay="true"
+                data-autoplayonlyfirsttime="false"
+                data-nextslideatend="true"
+                data-volume="mute"
+                data-forceCover="1"
+                data-aspectratio="16:9"
+                data-forcerewind="on">
+
+                <video preload="none" width="100%" height="100%" poster="video/light.jpg">
+                  <source src="http://media.bambu-mobile.com/video/intro.mp4" type="video/mp4" />
+                </video>
+
+              </div>
+
+              <div class="tp-caption main-label customin"
+                data-x="center" data-hoffset="0"
+                data-y="210"
+                data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                data-speed="800"
+                data-start="300"
+                data-easing="Back.easeInOut"
+                data-endspeed="300">SOFTWARE LIBRE Y CONSCIENTE
+              </div>
+
+              <div class="tp-caption dark bottom-label sfb"
+                data-x="center" data-hoffset="0"
+                data-y="360"
+                data-speed="800"
+                data-start="500"
+                data-easing="Back.easeInOut"
+                data-endspeed="300">Desarrollamos aplicaciones de alto impacto que generen cambios reales y positivos.
+              </div>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+
+      <div class="row center" id="get-started">
+        <div class="col-md-12">
+          <h2 class="short lead">
+            Nos <strong class="alternative-font default">encanta</strong> lo que hacemos, seguro te gustara
+          </h2>
+          <p class="featured lead">
+            Somos una empresa de desarrollo de software, que busca trascender a través de la tecnología como herramienta de cambios reales y positivos
+          </p>
+        </div>
+      </div>z
+
+      <hr class="tall">
+    </div>
+
+
+    <div class="container">
+
+      <div class="row">
+
+        <%= render "welcome/sectores" %>
+
+        <hr class="invisible tall">
+
+      </div>
+
+    </div>
+
+    <section class="parallax" data-stellar-background-ratio="0.4" id = "amigos">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" data-appear-animation="fadeInLeft">
+            <h2 class="push-top white"><i class="fa fa-language"></i> Creemos en las <strong>Personas</strong></h2>
+            <p class="white lead">
+              En Bambú Mobile concebimos a la tecnología como una herramienta con mira al futuro, con responsabilidad, conciencia, visión e impacto
+            <p class=" white tall">
+              Generamos proyectos vanguardistas que contribuyen como base a múltiples acciones en pro del desarrollo de la sociedad
+            </p>
+
+            <a class="btn btn-primary btn-lg push-top" href="shortcodes.html">Conoce Mas de Nosotros</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="home-player">
+        <a href="http://media.bambu-mobile.com/video/Bambu.mp4" class="home-player-icon" data-plugin-lightbox data-plugin-options='{"type":"iframe", "resizing": "true"}'>
+          <i class="fa fa-play-circle-o"></i>
+        </a>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <div class="row center" id="get-started">
+        <div class="col-md-12">
+          <h2 class="short lead">
+            <strong class="alternative-font default">Alto Impacto</strong> <br> Somos una empresa que desarrolla proyectos de software de alto impacto
+          </h2>
+          <p class="featured lead">
+            En la actualidad el uso de las tecnologías de la información y comunicación son clave para el crecimiento de la sociedad
+          </p>
+        </div>
+      </div>
+
+      <hr class="tall">
+
+      <div class="row featured-boxes tertiary push-top">
+        <div class="col-md-3">
+          <div class="featured-box featured-box-primary" data-appear-animation="fadeInUp" data-appear-animation-delay="0">
+            <div class="box-content">
+              <i class="icon-featured fa fa-user"></i>
+              <h4>Consciencia y trascendencia</h4>
+              <p>Pensamos en el planeta, en las personas y en las utilidades</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featured-box featured-box-primary" data-appear-animation="fadeInDown" data-appear-animation-delay="150">
+            <div class="box-content">
+              <i class="icon-featured fa fa-cogs"></i>
+              <h4>Desarrollo óptimo</h4>
+              <p>Cuidamos cada detalle de cada elemento para siempre conseguir el mejor resultado</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featured-box featured-box-primary" data-appear-animation="fadeInUp" data-appear-animation-delay="300">
+            <div class="box-content">
+              <i class="icon-featured fa fa-coffee"></i>
+              <h4>Lógica</h4>
+              <p>Mantenemos un sentido de orden y estructura en todo el proceso</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="featured-box featured-box-primary" data-appear-animation="fadeInDown" data-appear-animation-delay="450">
+            <div class="box-content">
+              <i class="icon-featured fa fa-paint-brush"></i>
+              <h4>Estado del Arte</h4>
+              <p>Profundizamos en el tema como si de nuestra vida se tratara</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="invisible">
+
+    </div>
+
+    <% render "welcome/banda" %>
+
+    <div class="container">
+
+      <hr class="invisible">
+
+      <div class="row">
+
+        <div class="center">
+          <h2>Creemos que para lograr dejar <strong> nuestra huella </strong> en este mundo es importante sumar los elementos necesarios</h2>
+          <p class="lead"><strong>Técnologia de Vanguardia:</strong> Para llevar acabo las grandes ideas utilizamos grandes metodologías e infraestructura de vanguardia
+            certificada a nivel internacional, lo cual nos permite brindar seguridad, funcionalidad y optimización</p>
+        </div>
+
+      </div>
+
+      <div class="row center push-top">
+        <div class="owl-carousel" data-plugin-options='{"items": 6, "singleItem": false, "pagination": false, "autoPlay": true}'>
+
+          <% direcciones = ["", "rubyonrails.org/", "developer.android.com/", "developer.apple.com/swift/",
+            "aws.amazon.com/es/", "developers.facebook.com/", "postgresql.org/", "heroku.com/", "github.com/",
+            "scrum.org/", "hibernate.org/", "parse.com/", "bitbucket.com/", "clojure.org/" ]
+          (1..13).each do |i|%>
+          <div>
+            <a href="http://<%= direcciones[i]%>">
+              <%= image_tag src="welcome/logo/logo-#{i}.png", :alt=>"", :class=>"img-responsive"%>
+            </a>
+          </div>
+          <%end%>
+        </div>
+      </div>
+
+    </div>
+
+  <%=render "welcome/nuevo" %>
+
+  <%=render "welcome/footer"%>
+</div>
+
+<%= render "welcome/scripts"%>

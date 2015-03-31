@@ -1,0 +1,26 @@
+/* Add here all your CSS customizations */
+
+/* Cambios hechos a la cabecera principal */
+div.tp-caption.main-label.customin.start{
+  color: #fff;
+  font-size: 70px;
+}
+
+div.tp-caption.dark.bottom-label.sfb.start{
+  color: #CEE3F6;
+}
+
+/* Cambios hechos al cuadro siguiente a la cabecera principal */
+#get-started p.featured.lead{
+  color: 767C84;
+  font-size: 2em;
+}
+
+/* Background para parallax */
+#amigos{
+  background-image: url('http://www.media.bambu-mobile.com/images/paginaWeb/parallax-2.jpg');
+}
+
+div.home-player{
+  top: 100px;
+}

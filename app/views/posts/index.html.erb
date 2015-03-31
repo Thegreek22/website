@@ -1,0 +1,53 @@
+</head>
+<body>
+  <%= render "posts/header" %>
+  </header>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <p id="notice"><%= notice %></p>
+  <!-- END header -->
+  <section class="content-padding recipes">
+    <div class="row">
+      <div class="large-12 medium-12 small-12 columns text-center">
+        <div class="head align-center">
+          <h2 class="margin0">Estas son tus publicaciones</h2>
+          <div class="filters text-center">
+            <a data-target='item'>Todas</a>
+            <% @categorias.each do |enlace| %>
+            <a data-target='category-<%=enlace.id%>'><%=enlace.name%></a>
+            <% end %>
+          </div>
+          <h6 class="fontsans big"><strong>Entradas recientes del blog</strong></h6>
+        </div>
+      </div>
+    </div>
+    <!-- recipe list -->
+    <div class="wow bounceInUp" data-wow-offset="250">
+      <div class="row" data-equalizer>
+      <% @posts.each do |publicacion| %>
+        <div class="item large-3 medium-6 small-12 columns category-<%= publicacion.category_id%>" data-equalizer-watch>
+          <div class="recipe text-center">
+            <div class="recipe-cover">
+              <a href="" class="like">
+                <i class="fa fa-heart-o"></i>
+                2054
+              </a>
+              <%= link_to publicacion.category.name, publicacion, class: "type"%>
+              <%= link_to "", publicacion, class: "recipe-link"%>
+              <%= image_tag publicacion.image, :alt => "" %>
+            </div>
+            <h6 class="fontsans margin0"><%= link_to publicacion.name, publicacion %></h6>
+          </div>
+        </div>
+      <%end%>
+      </div>
+    </div>
+    <div class="row collapse">
+      <div class="large-12 mecoim-12 small-12 columns text-center">
+        <div class="all"><a href="blog.html" class="button dark">Más entradas</a></div>
+      </div>
+    </div>
+    <!-- END recipe list -->
+  </section>
+    <%= render "blog/footer" %>
+    <%= render "blog/scripts" %>

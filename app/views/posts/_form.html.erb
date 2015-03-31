@@ -1,0 +1,76 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+        <div class="row">
+          <div class="large-12 medium-12 small-12 columns">
+              <%= f.text_field :name, placeholder: "Escribe aqui el titulo" %>
+            <div class="entry-cover" style="cursor: pointer;">
+              <a href="">
+                <%if (@post.name.nil? || @post.image=='')%>
+                  <%= image_tag "blog/add.png", id: "postImg"%>
+                <%else%>
+                  <%= image_tag @post.image, id: "postImg"%>
+                <%end%>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="large-9 medium-12 small-12 large-centered columns blog-text text-justify">
+            <p><%= f.text_area :content, placeholder: "Escribe aqui el contenido de la publicación"%></p>
+              <div class="row">
+                <div class="large-12 medium-12 large-8 columns">
+                  <%@opciones = Array.new
+                    @categorias.each do |p|
+                    @opciones.push([p.name, p.id])
+                  end%>
+                  <%= f.select :category_id, options_for_select(@opciones), {}%>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="large-4 medium-12 small-12 columns right">
+                  <input type="submit" value="Visualizar">
+                </div>
+                <div class="large-4 medium-12 small-12 columns right">
+                  <input type="button" value="Regresar" onclick="window.location='posts'">
+                </div>
+              </div>
+            </div>
+          </div>
+          <%= f.file_field :image, style: "display:none", id: "imagen"%>
+<% end %>
+
+<script>
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+              $('#postImg').attr('src', e.target.result);
+          }
+
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+
+  $('.entry-cover').click(function(){
+    $('#imagen').click();
+  });
+
+  $("#imagen").change(function(){
+    readURL(this);
+  });
+
+</script>

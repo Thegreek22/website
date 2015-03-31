@@ -1,0 +1,90 @@
+<div class="carrusel" >
+  <% @categorias.each do |categoria| %>
+    <!-- header -->
+    <div id="header">
+      <nav class="wow fadeInDown">
+        <div class="row">
+          <div class="large-3 medium-12 small-12 columns">
+            <%= link_to image_tag("logoBlanco.png"), {controller: "blog", action: "index"}, class: "logo"%>
+          </div>
+          <div class="large-9 medium-12 small-12 columns">
+            <span id="showmobilemenu" class="hide-for-large-up">Categorias</span>
+            <ul id="mainnav">
+              <% @categorias.each do |enlace| %>
+                <li><%= link_to enlace.name, controller: "blog", action: "category", id: enlace %></li>
+              <%end%>
+            </ul>
+          </div>
+        </div>
+      </nav>
+        <div class="header-content">
+          <h1 class="wow fadeInDown"><%= categoria.name %></h1>
+          <h6 class="big fontsans"><%= categoria.description %></h6>
+        </div>
+    </div>
+  <%end%>
+</div>
+    <!-- END header -->
+
+    <section class="content-padding recipes">
+      <div class="row">
+        <div class="large-12 medium-12 small-12 columns text-center">
+          <div class="head align-center">
+            <h2 class="margin0">Nuevas Publicaciones</h2>
+            <div class="filters text-center">
+              <a data-target='item'>Todas</a>
+              <% @categorias.each do |enlace| %>
+              <a data-target='category-<%=enlace.id%>'><%=enlace.name%></a>
+              <% end %>
+            </div>
+            <h6 class="fontsans big"><strong>Entradas recientes del blog</strong></h6>
+          </div>
+        </div>
+      </div>
+      <!-- recipe list -->
+      <div class="wow bounceInUp" data-wow-offset="250">
+        <div class="row" data-equalizer>
+        <% @blogs.each do |publicacion| %>
+          <div class="item large-3 medium-6 small-12 columns category-<%= publicacion.category_id%>" data-equalizer-watch>
+            <div class="recipe text-center">
+              <div class="recipe-cover">
+                <a href="" class="like">
+                  <i class="fa fa-heart-o"></i>
+                  2054
+                </a>
+                <%= link_to publicacion.category.name, {controller: "blog", action: "show", id: publicacion}, class: "type"%>
+                <%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "recipe-link"%>
+                <%= image_tag publicacion.image, :alt => "" %>
+              </div>
+              <h6 class="fontsans margin0"><%= link_to publicacion.name, controller: "blog", action: "show", id: publicacion %></h6>
+            </div>
+          </div>
+        <%end%>
+        </div>
+      </div>
+      <div class="row collapse">
+        <div class="large-12 mecoim-12 small-12 columns text-center">
+          <div class="all"><a href="blog.html" class="button dark">Más entradas</a></div>
+        </div>
+      </div>
+      <!-- END recipe list -->
+    </section>
+    <%= render "blog/footer" %>
+    <%= render "blog/scripts" %>
+
+    <script>
+      $(document).ready(function(){
+        $('.carrusel').slick({
+          arrows: false,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          // responsive: [
+          //   breakpoint: 480,
+          //   settings: "unslick"
+          // ]
+        });
+      });
+    </script>

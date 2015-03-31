@@ -1,0 +1,39 @@
+<%= render "blog/header" %>
+</header>
+<!-- END header -->
+  <section class="content-padding">
+    <div class="row">
+      <div class="large-12 medium-12 small-12 columns text-center">
+        <div class="head align-center">
+          <h2 class="margin0"><%= @currentCategory[0].name %></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="wow bounceInUp" data-wow-offset="350">
+      <div class="row blog-entries">
+      <% @blogs.each do |publicacion| %>
+        <!-- wpis -->
+        <div class="item large-4 medium-6 small-12 columns">
+          <div class="cover"><%= link_to raw("<i class='fa fa-heart-o'></i>"), {controller: "blog", action: "show", id: publicacion}, class: "like-it"%><%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "entry-link"%>
+            <%= image_tag publicacion.image %>
+          </div>
+          <div class="entry-name">
+            <p class="data"><%=publicacion.created_at%></p>
+            <h4 class="fontsans entry-title"><%= link_to publicacion.name, {controller: "blog", action: "show", id: publicacion}%></h4>
+            <p> <%=publicacion.content[0, 50]%> <%= link_to "Ver más...", {controller: "blog", action: "show", id: publicacion}, class: "blue read"%></p>
+          </div>
+        </div>
+        <!-- END wpis -->
+      <%end%>
+      </div>
+    </div>
+
+    <div class="row collapse">
+      <div class="large-12 medium-12 small-12 columns text-center">
+        <div class="all"><a href="entry.html" class="button dark">Cargar más...</a></div>
+      </div>
+    </div>
+  </section>
+  <%= render "blog/footer" %>
+  <%= render "blog/scripts" %>

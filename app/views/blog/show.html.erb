@@ -1,0 +1,46 @@
+<%= render "blog/header" %>
+</header>
+    <section class="content-padding">
+      <div class="row">
+        <div class="large-12 medium-12 small-12 columns text-center">
+          <div class="head align-center">
+            <h3 class="margin0 fontsans"><%= @blogs.name%></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 medium-12 small-12 columns">
+          <div class="entry-cover">
+            <a href="" class="like-it"><i class="fa fa-heart-o"></i></a><a href="blog.html"><%= image_tag @blogs.image%></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-9 medium-12 small-12 large-centered columns blog-text text-justify">
+          <p><%= @blogs.content%></p>
+
+          <ul class="soc">
+
+          </ul>
+
+          <h4>Comentarios:</h4>
+
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=1414117148890549&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+
+          <div class="fb-comments" data-href="http://localhost:3000/proves/<%= @blogs.id %>" data-width="600px" data-numposts="5" data-colorscheme="light"></div>
+        </div>
+      </div>
+    </section>
+    <%= render "blog/footer" %>
+    <%= render "blog/scripts" %>
+
+<p id="notice"><%= notice %></p>

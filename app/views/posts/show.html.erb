@@ -1,0 +1,38 @@
+<%= render "posts/header" %>
+</header>
+<p id="notice"><%= notice %></p>
+    <section class="content-padding">
+      <div class="row">
+        <div class="large-12 medium-12 small-12 columns text-center">
+          <div class="head align-center">
+            <h3 class="margin0 fontsans"><%= @post.name + "(#{@categoria[0].name})" %></h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-12 medium-12 small-12 columns">
+          <div class="entry-cover">
+            <a href="" class="like-it"><i class="fa fa-heart-o"></i></a><a href="blog.html"><%= image_tag @post.image%></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-9 medium-12 small-12 large-centered columns blog-text text-justify">
+          <p><%= @post.content%></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-4 medium-12 large-8 columns">
+          <%= link_to raw('<input type="submit" value="Editar">'), edit_post_path(@post) %>
+        </div>
+        <div class="large-4 medium-12 small-12 columns">
+          <%= link_to raw('<input type="submit" value="Eliminar">'), @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      </div>
+    </section>
+
+    <%= render "blog/footer" %>
+    <%= render "blog/scripts" %>

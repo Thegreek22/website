@@ -1,0 +1,57 @@
+<%= render "blog/header" %>
+</header>
+    <section class="content-padding">
+      <div class="row">
+        <div class="large-12 medium-12 small-12 columns text-center">
+          <div class="head align-center">
+            <h3 class="margin0 fontsans">Publica una nueva entrada</h3>
+          </div>
+        </div>
+      </div>
+
+    <form>
+      <div class="row">
+        <div class="large-12 medium-12 small-12 columns">
+          <div class="entry-cover">
+            <a href="blog.html"><%= image_tag "blog/entry.jpg"%></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="large-9 medium-12 small-12 large-centered columns blog-text text-justify">
+          <p><textarea contentEditable=true id="cuadroPublicacion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Etiam nulla elit, eleifend ut finibus ac, mollis id eros.
+            Phasellus felis mauris, auctor imperdiet orci non, finibus vehicula libero.
+            Aliquam id augue at ex consectetur viverra. Duis sed tincidunt tortor.
+            Vivamus finibus eget mauris tempor aliquam. Suspendisse porta vestibulum lorem et tincidunt. Suspendisse potenti.
+            Vestibulum non volutpat magna. Maecenas semper, ex eget commodo posuere, odio lorem auctor urna, sit amet rhoncus erat ex eget est.</textarea></p>
+            <div class="row">
+              <div class="large-4 medium-12 large-8 columns">
+                <select>
+                  <option value="Categoria1" selected="selected">categoria 1</option>
+                  <option value="Categoria2">Categoria 2</option>
+                  <option value="Categoria3">Categoria 3</option>
+                  <option value="Categoria4">Categoria 4</option>
+                </select>
+              </div>
+              <div class="large-4 medium-12 small-12 columns">
+                <input type="submit" value="Visualizar">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <%= render "blog/footer" %>
+    <%= render "blog/scripts" %>
+    <%= javascript_include_tag "jquery.liveurl.js" %>
+    <%= javascript_tag do %>
+    $('textarea').liveUrl({
+        success : function(data)
+        {
+          console.log(data);
+          // this return the first found url data
+        }
+      });
+    <% end %>

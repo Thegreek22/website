@@ -1,0 +1,19 @@
+<%= javascript_include_tag "blog/slick.min.js" %>
+<%= javascript_include_tag "blog/app.js" %>
+<%= javascript_include_tag "blog/wow.min.js" %>
+  <script>
+    jQuery(document).foundation({
+      equalizer: {
+          equalize_on_stack: true
+      }
+    });
+    wow = new WOW(
+      {
+        mobile: false
+      }
+    )
+    wow.init();
+  </script>
+<%= javascript_include_tag "blog/packery.js" %>
+<%= javascript_include_tag "blog/imagesloaded.pkgd.min.js"%>
+<%= javascript_include_tag "blog/jquery.flexslider-min.js"%>
