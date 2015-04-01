@@ -1,4 +1,3 @@
-
 class DeviseCreateAdminUsers < ActiveRecord::Migration
   def migrate(direction)
     super

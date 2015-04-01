@@ -1,0 +1,4 @@
+class Weardname < ActiveRecord::Migration
+  def change
+  end
+end
