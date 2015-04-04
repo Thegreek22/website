@@ -6,32 +6,32 @@
 /* -------------------------------
 	Foundation
 ------------------------------------*/
-//= require blog/foundation
+@import url("foundation.css");
 
 /* -------------------------------
 	Google Fonts
 ------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&subset=latin,latin-ext");
+@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700&subset=latin,latin-ext");
 
-@import url("https://fonts.googleapis.com/css?family=Grand+Hotel&subset=latin,latin-ext");
+@import url("http://fonts.googleapis.com/css?family=Grand+Hotel&subset=latin,latin-ext");
 
 //= require font-awesome
 
 /* -------------------------------
 	Animate CSS
 ------------------------------------*/
-//= require blog/animate
+@import url("animate.css");
 
 /* -------------------------------
 	Timeline & Flexslider
 ------------------------------------*/
-//= require blog/timeline
-//= require blog/flexslider
+@import url("timeline.css");
+@import url("flexslider.css");
 
 /* -------------------------------
 	Mobile
 ------------------------------------*/
-//= require blog/mobile
+@import url("mobile.css");
 
 /* -------------------------------
 	Typography
@@ -129,7 +129,6 @@ a {
 	Header & Footer Bottom
 ------------------------------------*/
 #header {
-	background-image: url(header.jpg);
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: relative;
@@ -138,8 +137,23 @@ a {
 	background-size: cover!important;
 }
 
-	#header:before,
-	#footer:before {
+
+/*----------------------------------
+	Backgrounds
+------------------------------------*/
+#header.sociedad{
+	background-image: url(categorias/SociedadTecnología.jpg);
+}
+#header.paradigmas{
+	background-image: url(categorias/NuevosParadigmas.jpg);
+}
+#header.desarrollo{
+	background-image: url(categorias/DesarrolloHumano.jpg);
+}
+#header.comportamiento{
+	background-image: url(categorias/ComportamientoTecnologico.jpg);
+}
+	#header:before {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -150,15 +164,13 @@ a {
 		background:rgba(100,96,102,0.5);
 	}
 
-	#header nav,
-	#footer-bottom {
+	#header nav {
 		background: rgba(43,41,44,0.55);
 		position: relative;
 		z-index: 10;
 	}
 
-		#header nav ul,
-		#footer-bottom ul {
+		#header nav ul {
 			list-style-type: none;
 			text-align: right;
 			margin: 0;
@@ -170,15 +182,6 @@ a {
 				font-weight: 700;
 				text-transform: uppercase;
 				padding: 25px 0 0 20px;
-			}
-
-			#footer-bottom ul li {
-				display: inline-block;
-				font-size: 14px;
-				font-weight: 300;
-				text-transform: uppercase;
-				padding: 0px 0 0 20px;
-				line-height: 96px;
 			}
 
 			#header nav ul li a {
@@ -193,16 +196,6 @@ a {
 				border-bottom: 2px solid rgba(255,255,255,0);
 			}
 
-			#footer-bottom ul li a {
-				display: block;
-				color: rgba(255,255,255,0.7);
-				-webkit-transition: all 0.3s ease;
-				-moz-transition: all 0.3s ease;
-				-ms-transition: all 0.3s ease;
-				-o-transition: all 0.3s ease;
-				transition: all 0.3s ease;
-			}
-
 				#header nav ul li a:hover{
 					border-bottom: 2px solid rgba(255,255,255,0.8);
 					color: rgba(255,255,255,0.8);
@@ -213,12 +206,7 @@ a {
 					color: rgba(255,255,255,1);
 				}
 
-				#footer-bottom ul li a:hover {
-					color: rgba(255,255,255,1);
-				}
-
-	#header .logo,
-	#footer-bottom .logo {
+	#header .logo {
 		color: rgba(255,255,255,1);
 		font-family: 'Grand Hotel', cursive;
 		font-size: 25px;
@@ -338,7 +326,7 @@ a {
 	transform: scale(1.2);
 }
 
-	.recipe-cover img {
+	.recipe-cover img.pub_photo{
 		-webkit-transition: all 0.3s ease;
 		-moz-transition: all 0.3s ease;
 		-ms-transition: all 0.3s ease;
@@ -419,6 +407,20 @@ a {
 			height: 100%;
 			position: absolute;
 			z-index: 15;
+		}
+
+		/* Agregados por mi */
+		a.profile{
+			right: 10px;
+			top: 10px;
+		}
+
+		a.profile img{
+			width: 50px;
+			height: 50px;
+			border-radius: 100%;
+			-webkit-border-radius: 100%;
+			-moz-border-radius: 100%;
 		}
 
 /* -------------------------------
@@ -561,43 +563,282 @@ a {
 /* -------------------------------
 	Footer
 ------------------------------------*/
+
+/* #Footer */
 #footer {
-	background-image: url(footer.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
+	background: #2d343e;
+	border-top: 4px solid #2d343e;
+	font-size: 0.9em;
+	margin-top: 70px;
+	padding: 80px 0 0;
 	position: relative;
-	-moz-background-size: cover!important;
-	-webkit-background-size: cover!important;
-	background-size: cover!important;
+	clear: both;
 }
 
-/* -------------------------------
-	Footer Top
-------------------------------------*/
-#footer-top {
-	padding: 60px 0;
+#footer p {
+	color: #7a8089;
+	font-size: 1em;
 }
 
-	#footer-top h4 {
-		color: #ffffff;
+#footer a:hover {
+	color: #CCC;
+}
+
+#footer form {
+	filter: alpha(opacity=85);
+	opacity: 0.85;
+}
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer a {
+	color: #FFF !important;
+}
+
+#footer h4 {
+	font-family: "Oswald",sans-serif;
+	font-size: 1.8em;
+	font-weight: 200;
+}
+
+#footer h5 {
+	color: #CCC !important;
+}
+
+#footer ul.nav-list.primary > li a {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	line-height: 20px;
+	padding-bottom: 11px;
+}
+
+#footer ul.nav-list.primary > li:last-child a {
+	border-bottom: 0;
+}
+
+#footer ul.nav-list.primary > li a:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+#footer ul.list.icons li {
+	margin-bottom: 5px;
+}
+
+#footer .container .row > div {
+	margin-bottom: 25px;
+}
+
+#footer .container input:focus {
+	box-shadow: none;
+}
+
+#footer .alert a {
+	color: #222 !important;
+}
+
+#footer .alert a:hover {
+	color: #666 !important;
+}
+
+#footer .twitter .fa {
+	clear: both;
+	font-size: 1.5em;
+	position: relative;
+	top: 3px;
+}
+
+#footer .twitter .time {
+	color: #999;
+	display: block;
+	font-size: 0.9em;
+	padding-top: 3px;
+	margin-bottom: 20px;
+}
+
+#footer .twitter .time:last-child {
+	margin-bottom: 0;
+}
+
+#footer .twitter ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .twitter-account {
+	color: #FFF;
+	display: block;
+	font-size: 0.9em;
+	margin: -15px 0 5px;
+	filter: alpha(opacity=55);
+	opacity: 0.55;
+}
+
+#footer .twitter-account:hover {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+#footer .contact {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .contact i {
+	display: block;
+	float: left;
+	font-size: 1.2em;
+	margin: 7px 8px 10px 0;
+	position: relative;
+	text-align: center;
+	top: -2px;
+	width: 16px;
+}
+
+#footer .contact i.fa-envelope {
+	font-size: 1em;
+	top: 0;
+}
+
+#footer .contact p {
+	margin-bottom: 10px;
+}
+
+#footer .logo {
+	display: block;
+	margin-bottom: 3px;
+}
+
+#footer .logo.push-bottom {
+	margin-bottom: 12px;
+}
+
+#footer .footer-copyright {
+	background: #272d35;
+	border-top: 4px solid #272d35;
+	margin-top: 40px;
+	padding: 30px 0 10px;
+}
+
+#footer .footer-copyright nav {
+	float: right;
+}
+
+#footer .footer-copyright nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .footer-copyright nav ul li {
+	border-left: 1px solid #505050;
+	display: inline-block;
+	line-height: 12px;
+	margin: 0;
+	padding: 0 8px;
+}
+
+#footer .footer-copyright nav ul li:first-child {
+	border: medium none;
+	padding-left: 0;
+}
+
+#footer .footer-copyright p {
+	color: #5b616a;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .phone {
+	color: #FFF;
+	font-size: 26px;
+	font-weight: bold;
+	display: block;
+	padding-bottom: 15px;
+	margin-top: -5px;
+}
+
+#footer .social-icons {
+	clear: both;
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .social-icons li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#footer .social-icons li a {
+	display: inline-block;
+	width: 35px;
+	color: #5B616A !important;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 20px;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+#footer .recent-work li {
+	float: left;
+	width: 30%;
+	margin: 10px 3% 0 0;
+}
+
+#footer .recent-work li .thumb-info {
+	float: left;
+	display: inline-block;
+	background: transparent;
+	border: 0;
+}
+
+#footer .recent-work li:hover img {
+	-webkit-transform: none;
+	-moz-transform: none;
+	-ms-transform: none;
+	-o-transform: none;
+	transform: none;
+	opacity: 1;
+	filter: none;
+	-webkit-filter: none;
+}
+
+#footer .recent-work img {
+	width: 100%;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+	filter: gray;
+	-webkit-filter: grayscale(100%);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	width: 100%;
+	opacity: 0.5;
+}
+
+#footer .view-more-recent-work {
+	padding: 12px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+	#footer .phone {
+		font-size: 20px;
 	}
+}
 
-	#footer-top p {
-		color: rgba(255,255,255,0.75);
-		font-weight: 300;
+@media (max-width: 767px) {
+  /* Footer */
+	#footer .phone {
+		font-size: 20px;
 	}
+}
 
-		#footer-top p:last-child {
-			margin: 0;
-		}
 
-	#footer-top a {
-		color: rgba(255,255,255,1);
-	}
-
-		#footer-top a:hover {
-			text-decoration: underline;
-		}
 
 /* -------------------------------
 	Social Icons
