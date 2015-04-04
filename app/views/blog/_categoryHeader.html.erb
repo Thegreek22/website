@@ -1,0 +1,27 @@
+<%@categoria_actual = case @currentCategory[0].id
+                          when 1
+                            "sociedad"
+                          when 2
+                            "paradigmas"
+                          when 3
+                            "desarrollo"
+                          when 4
+                            "comportamiento"
+                        end%>
+  <!-- header -->
+  <header id="header" class="<%=@categoria_actual%>">
+    <nav class="wow fadeInDown">
+      <div class="row">
+        <div class="large-3 medium-12 small-12 columns">
+          <%= link_to image_tag("logoBlanco.png"), {controller: "blog", action: "index"}, class: "logo"%>
+        </div>
+        <div class="large-9 medium-12 small-12 columns">
+          <span id="showmobilemenu" class="hide-for-large-up">Menu</span>
+          <ul id="mainnav">
+            <% @categorias.each do |enlace| %>
+              <li><%= link_to enlace.name, controller: "blog", action: "category", id: enlace %></li>
+            <%end%>
+          </ul>
+        </div>
+      </div>
+    </nav>
