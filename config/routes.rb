@@ -8,12 +8,9 @@ Rails.application.routes.draw do
 
   get 'blog/categoria' => 'blog#category'
   get 'blog/articulo' => 'blog#entry'
-  get 'blog/receta' => 'blog#recipe'
   get 'blog' => 'blog#index'
   get 'blog/categoria/:nombre' => 'blog#categoria'
-  get 'blog/perfil' => 'blog#perfil'
-  get 'blog/datos' => 'blog#info'
-  get 'blog/publicar' => 'blog#new'
+  get 'blog/blogger/:id' => 'blog#profile'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
