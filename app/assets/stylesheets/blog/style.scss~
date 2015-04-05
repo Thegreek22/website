@@ -6,7 +6,7 @@
 /* -------------------------------
 	Foundation
 ------------------------------------*/
-@import url("https://media.bambu-mobile.com/blog/estilos/foundation.css");
+@import url("http://media.bambu-mobile.com/blog/estilos/foundation.css");
 
 /* -------------------------------
 	Google Fonts
@@ -20,18 +20,18 @@
 /* -------------------------------
 	Animate CSS
 ------------------------------------*/
-@import url("https://media.bambu-mobile.com/blog/estilos/animate.css");
+@import url("http://media.bambu-mobile.com/blog/estilos/animate.css");
 
 /* -------------------------------
 	Timeline & Flexslider
 ------------------------------------*/
-@import url("https://media.bambu-mobile.com/blog/estilos/timeline.css");
-@import url("https://media.bambu-mobile.com/blog/estilos/flexslider.css");
+@import url("http://media.bambu-mobile.com/blog/estilos/timeline.css");
+@import url("http://media.bambu-mobile.com/blog/estilos/flexslider.css");
 
 /* -------------------------------
 	Mobile
 ------------------------------------*/
-@import url("https://media.bambu-mobile.com/blog/estilos/mobile.css");
+@import url("http://media.bambu-mobile.com/blog/estilos/mobile.css");
 
 /* -------------------------------
 	Typography

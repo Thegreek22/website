@@ -142,16 +142,16 @@ a {
 	Backgrounds
 ------------------------------------*/
 #header.sociedad{
-	background-image: url(blog/categorias/SociedadTecnología.jpg);
+	background-image: image-url("SociedadTecnología.jpg");
 }
 #header.paradigmas{
-	background-image: url(blog/categorias/NuevosParadigmas.jpg);
+	background-image: image-url("NuevosParadigmas.jpg");
 }
 #header.desarrollo{
-	background-image: url(blog/categorias/DesarrolloHumano.jpg);
+	background-image: image-url("DesarrolloHumano.jpg");
 }
 #header.comportamiento{
-	background-image: url(blog/categorias/ComportamientoTecnologico.jpg);
+	background-image: image-url("ComportamientoTecnologico.jpg");
 }
 	#header:before {
 		content: "";
