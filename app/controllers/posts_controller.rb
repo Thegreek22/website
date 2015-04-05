@@ -25,6 +25,9 @@ class PostsController < InheritedResources::Base
   def edit
   end
 
+  def perfil
+  end
+
   # POST /posts
   # POST /posts.json
   def create
