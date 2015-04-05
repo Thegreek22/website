@@ -6,7 +6,7 @@
 /* -------------------------------
 	Foundation
 ------------------------------------*/
-@import url("blog/foundation.css");
+@import asset-url("foundation.css");
 
 /* -------------------------------
 	Google Fonts
@@ -20,18 +20,18 @@
 /* -------------------------------
 	Animate CSS
 ------------------------------------*/
-@import url("blog/animate.css");
+@import asset-url("animate.css");
 
 /* -------------------------------
 	Timeline & Flexslider
 ------------------------------------*/
-@import url("blog/timeline.css");
-@import url("blog/flexslider.css");
+@import asset-url("timeline.css");
+@import asset-url("flexslider.css");
 
 /* -------------------------------
 	Mobile
 ------------------------------------*/
-@import url("blog/mobile.css");
+@import asset-url("mobile.css");
 
 /* -------------------------------
 	Typography

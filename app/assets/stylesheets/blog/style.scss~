@@ -6,7 +6,7 @@
 /* -------------------------------
 	Foundation
 ------------------------------------*/
-@import url("http://media.bambu-mobile.com/blog/estilos/foundation.css");
+@import url("blog/foundation.css");
 
 /* -------------------------------
 	Google Fonts
@@ -20,18 +20,18 @@
 /* -------------------------------
 	Animate CSS
 ------------------------------------*/
-@import url("http://media.bambu-mobile.com/blog/estilos/animate.css");
+@import url("blog/animate.css");
 
 /* -------------------------------
 	Timeline & Flexslider
 ------------------------------------*/
-@import url("http://media.bambu-mobile.com/blog/estilos/timeline.css");
-@import url("http://media.bambu-mobile.com/blog/estilos/flexslider.css");
+@import url("blog/timeline.css");
+@import url("blog/flexslider.css");
 
 /* -------------------------------
 	Mobile
 ------------------------------------*/
-@import url("http://media.bambu-mobile.com/blog/estilos/mobile.css");
+@import url("blog/mobile.css");
 
 /* -------------------------------
 	Typography
@@ -142,16 +142,16 @@ a {
 	Backgrounds
 ------------------------------------*/
 #header.sociedad{
-	background-image: url(blog/categorias/SociedadTecnología.jpg);
+	background-image: url("SociedadTecnología.jpg");
 }
 #header.paradigmas{
-	background-image: url(blog/categorias/NuevosParadigmas.jpg);
+	background-image: url("NuevosParadigmas.jpg");
 }
 #header.desarrollo{
-	background-image: url(blog/categorias/DesarrolloHumano.jpg);
+	background-image: url("DesarrolloHumano.jpg");
 }
 #header.comportamiento{
-	background-image: url(blog/categorias/ComportamientoTecnologico.jpg);
+	background-image: url("ComportamientoTecnologico.jpg");
 }
 	#header:before {
 		content: "";
