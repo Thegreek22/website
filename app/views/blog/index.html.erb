@@ -61,7 +61,11 @@
                 </a>
                 <%= link_to publicacion.category.name, {controller: "blog", action: "show", id: publicacion}, class: "type"%>
                 <%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "recipe-link"%>
-                <%= image_tag publicacion.image, :alt => "", :class => "pub_photo"%>
+                <%if publicacion.image.to_s == ''%>
+                  <%= image_tag Category.photo(publicacion.category_id), :alt => "", :class => "pub_photo"%>
+                <%else%>
+                  <%= image_tag publicacion.image, :alt => "", :class => "pub_photo"%>
+                <%end%>
               </div>
               <h6 class="fontsans margin0"><%= link_to publicacion.name, controller: "blog", action: "show", id: publicacion %></h6>
             </div>

@@ -1,7 +1,7 @@
 class Category < ActiveRecord::Base
 	has_many :posts
-	def photo
-		@categoria_actual = case self.id
+	def self.photo(id)
+		@categoria_actual = case id.to_s
                           when "1"
                             "SociedadTecnología.jpg"
                           when "2"
