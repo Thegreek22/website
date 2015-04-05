@@ -6,7 +6,7 @@
 /* -------------------------------
 	Foundation
 ------------------------------------*/
-@import asset-url("foundation.css");
+@import url("blog/foundation-563376b2f05c22641960d15a1a069574.css");
 
 /* -------------------------------
 	Google Fonts
@@ -20,18 +20,18 @@
 /* -------------------------------
 	Animate CSS
 ------------------------------------*/
-@import asset-url("animate.css");
+@import url("blog/animate-7bef29d0c427ac89278cce72322bd1ca.css");
 
 /* -------------------------------
 	Timeline & Flexslider
 ------------------------------------*/
-@import asset-url("timeline.css");
-@import asset-url("flexslider.css");
+@import url("blog/timeline-6db520b0fafd4b36e88c2adbd933835c.css");
+@import url("blog/flexslider-fe72862eeae17f93cf6bc931dbc8c5e5.css");
 
 /* -------------------------------
 	Mobile
 ------------------------------------*/
-@import asset-url("mobile.css");
+@import asset-url("mobile-d76451ea84fa85362c627ed17472cfe2.css");
 
 /* -------------------------------
 	Typography
@@ -142,16 +142,16 @@ a {
 	Backgrounds
 ------------------------------------*/
 #header.sociedad{
-	background-image: url("SociedadTecnología.jpg");
+	background-image: url("blog/SociedadTecnología.jpg");
 }
 #header.paradigmas{
-	background-image: url("NuevosParadigmas.jpg");
+	background-image: url("blog/NuevosParadigmas.jpg");
 }
 #header.desarrollo{
-	background-image: url("DesarrolloHumano.jpg");
+	background-image: url("blog/DesarrolloHumano.jpg");
 }
 #header.comportamiento{
-	background-image: url("ComportamientoTecnologico.jpg");
+	background-image: url("blog/ComportamientoTecnologico.jpg");
 }
 	#header:before {
 		content: "";
