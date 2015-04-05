@@ -62,7 +62,7 @@
                 <%= link_to publicacion.category.name, {controller: "blog", action: "show", id: publicacion}, class: "type"%>
                 <%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "recipe-link"%>
                 <%if publicacion.image.to_s == ''%>
-                  <%= image_tag Category.photo(publicacion.category_id), :alt => "", :class => "pub_photo"%>
+                  <%= image_tag "blog/categorias/#{Category.photo(publicacion.category_id}"), :alt => "", :class => "pub_photo"%>
                 <%else%>
                   <%= image_tag publicacion.image, :alt => "", :class => "pub_photo"%>
                 <%end%>
