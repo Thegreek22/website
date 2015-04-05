@@ -13,7 +13,13 @@
       <div class="row">
         <div class="large-12 medium-12 small-12 columns">
           <div class="entry-cover">
-            <a href="" class="like-it"><i class="fa fa-heart-o"></i></a><a href="blog.html"><%= image_tag @post.image%></a>
+            <a href="" class="like-it"><i class="fa fa-heart-o"></i></a><a href="blog.html">
+              <%if (@post.image=='')%>
+                <%= image_tag "blog/categoria/#{@categoria[0].photo}"%>
+              <%else%>
+                <%= image_tag @post.image%>
+              <%end%>
+            </a>
           </div>
         </div>
       </div>
