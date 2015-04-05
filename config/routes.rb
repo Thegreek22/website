@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   get 'blog' => 'blog#index'
   get 'blog/categoria/:nombre' => 'blog#categoria'
   get 'blog/blogger/:id' => 'blog#profile'
-  get 'posts/perfil' => 'posts#perfil'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

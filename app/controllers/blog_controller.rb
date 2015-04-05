@@ -14,6 +14,12 @@ class BlogController < ApplicationController
   def show
   end
 
+  def profile
+    @currentCategory = Category.where(id: 1)
+    @blogs = Post.where(user_id: params[:id])
+    @blogger = User.where(id: params[:id])[0]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
