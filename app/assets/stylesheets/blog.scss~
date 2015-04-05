@@ -7,6 +7,10 @@
 // Styles blog
 //= require blog/slick
 //= require blog/style
+//= require blog/animate
+//= require blog/timeline
+//= require blog/flexslider
+//= require blog/mobile
 
 //= require font-awesome
 

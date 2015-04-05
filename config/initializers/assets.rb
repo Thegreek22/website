@@ -37,6 +37,11 @@ Rails.application.config.assets.precompile += %w( welcome/theme.init.js )
 
 # Assets del blog
 Rails.application.config.assets.precompile += %w( blog.css )
+Rails.application.config.assets.precompile += %w( blog/foundation.css )
+Rails.application.config.assets.precompile += %w( blog/animate.css )
+Rails.application.config.assets.precompile += %w( blog/timeline.css )
+Rails.application.config.assets.precompile += %w( blog/flexslider.css )
+Rails.application.config.assets.precompile += %w( blog/mobile.css )
 Rails.application.config.assets.precompile += %w( blog.js )
 Rails.application.config.assets.precompile += %w( blog/slick.min.js )
 Rails.application.config.assets.precompile += %w( blog/app.js )
