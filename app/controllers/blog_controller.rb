@@ -17,7 +17,7 @@ class BlogController < ApplicationController
 
   def profile
     @currentCategory = Category.where(id: 1)
-    @blogs = Post.where(user_id: params[:id])
+    @blogs = Post.where(user_id: params[:id]).order('created_at DESC')
     @blogger = User.where(id: params[:id])[0]
   end
 
