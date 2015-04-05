@@ -12,6 +12,7 @@ class BlogController < ApplicationController
   end
 
   def show
+    @blogger = User.where(id: @blogs.user_id)[0]
   end
 
   def profile
