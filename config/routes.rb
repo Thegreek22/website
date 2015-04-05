@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'blog' => 'blog#index'
   get 'blog/categoria/:nombre' => 'blog#categoria'
   get 'blog/blogger/:id' => 'blog#profile'
+  get 'posts/perfil' => 'posts#perfil'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -36,7 +37,6 @@ Rails.application.routes.draw do
   get '/nosotros' => 'welcome#nosotros'
   get '/servicios' => 'welcome#servicios'
   post '/correo' => 'welcome#enviarCorreo'
-  get 'posts/perfil' => 'posts#perfil'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
