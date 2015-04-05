@@ -25,6 +25,7 @@ class PostsController < InheritedResources::Base
   def edit
   end
 
+  # GET /posts/1/edit
   def perfil
   end
 

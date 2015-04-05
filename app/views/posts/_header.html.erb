@@ -8,7 +8,7 @@
         <div class="large-9 medium-12 small-12 columns">
           <span id="showmobilemenu" class="hide-for-large-up">Menu</span>
           <ul id="mainnav">
-            <li><%= link_to "Perfil", controller: "posts", action: "index"%></li>
+            <li><%= link_to "Perfil", controller: "posts", action: "perfil"%></li>
             <li><%= link_to "Publicaciones", controller: "posts", action: "index"%></li>
             <li><%= link_to "Nueva Pub", new_post_path %></li>
             <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
