@@ -27,7 +27,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'carrierwave'
 gem 'activeadmin', github: 'activeadmin'
-
 gem 'font-awesome-rails'
 
 # Use ActiveModel has_secure_password

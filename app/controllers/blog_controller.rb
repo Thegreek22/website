@@ -1,5 +1,5 @@
 class BlogController < ApplicationController
-  before_action :set_post, only: [:show]
+  before_action :set_post, only: [:show, :count]
   before_action :set_categories
 
   def index
@@ -13,6 +13,11 @@ class BlogController < ApplicationController
 
   def show
     @blogger = User.where(id: @blogs.user_id)[0]
+  end
+
+  def count
+    cont = @blogs.count+1
+    @blogs.update_attributes(:count=> cont)
   end
 
   def profile
@@ -30,5 +35,4 @@ class BlogController < ApplicationController
     def set_categories
       @categorias = Category.all
     end
-
 end

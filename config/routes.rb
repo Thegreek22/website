@@ -2,9 +2,10 @@ Rails.application.routes.draw do
 
   # Aqui iran las rutas del blog
 
-  get 'blog/index'
 
+  get 'blog/index'
   get 'blog/show'
+  get 'blog/count' 
 
   get 'blog/categoria' => 'blog#category'
   get 'blog/articulo' => 'blog#entry'
@@ -22,9 +23,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   # Rails.application.routes.draw do
 
+
   # Y aqui las del front
   get 'welcome/index'
-
   #       devise_for :users, controllers: {
   #         sessions: 'sessions'
   #       }

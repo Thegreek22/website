@@ -24,7 +24,7 @@
               <p><%= @blogs.content%></p>
 
               <ul class="soc">
-
+                <%= link_to "contar", :action => "count", :id => @blogs.id%>
               </ul>
 
               <h4>Comentarios:</h4>
