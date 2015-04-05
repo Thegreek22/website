@@ -33,7 +33,7 @@
       <div class="row">
         <div class="large-12 medium-12 small-12 columns">
           <div class="head align-center">
-            <h2 class="margin0">Some facts of my life</h2>
+            <h2 class="margin0">Esto es en lo que creemos</h2>
           </div>          
           <section id="cd-timeline" class="cd-container">
             <%@blogs.each do |publicacion|%>
@@ -43,11 +43,10 @@
                 </div> <!-- cd-timeline-img -->
 
                 <div class="cd-timeline-content">
-                  <h4 class="fontsans">My first own dish</h4>
-                  <div class="cover"><img src="img/food1.jpg"></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. Tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-                  
-                  <span class="cd-date">Jan 14</span>
+                  <h4 class="fontsans"><%=publicacion.name%></h4>
+                  <div class="cover"><%=image_tag publicacion.photo%></div>
+                  <p><%=publicacion.content[0, 50]%> <%= link_to "Ver más...", {controller: "blog", action: "show", id: publicacion}, class: "blue read"%></p>
+                  <span class="cd-date"><%=publicacion.created_at%></span>
                 </div> <!-- cd-timeline-content -->
               </div> <!-- cd-timeline-block -->
             <%end%>
