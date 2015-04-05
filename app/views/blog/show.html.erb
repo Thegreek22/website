@@ -38,6 +38,17 @@
 
           <div class="fb-comments" data-href="http://localhost:3000/proves/<%= @blogs.id %>" data-width="600px" data-numposts="5" data-colorscheme="light"></div>
         </div>
+        <div class="large-2 medium-2 small-12 columns">
+          <div class="ingredients">
+            <h5 class="fontsans"><%= @blogger.name%></h5>
+            <ul class="no-bullet">
+              <li><%= link_to image_tag(@blogger.photo), {controller: "blog", action: "profile", id: @blogs.user_id}%></li>
+              <li>¼ cup fresh lime juice, plus wedges for serving</li>
+              <li>¼ cup fresh lime juice, plus wedges for serving</li>
+              <li>¼ cup reduced-sodium soy sauce</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
     <%= render "blog/footer" %>
