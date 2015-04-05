@@ -50,7 +50,6 @@
           <div class="item large-3 medium-6 small-12 columns category-<%= publicacion.category_id%>" data-equalizer-watch>
             <div class="recipe text-center">
               <div class="recipe-cover">
-                <h1><%=publicacion.user_photo%></h1>
                 <%if (publicacion.user_photo.to_s == '')%>
                   <%= link_to image_tag("blog/avatar.jpg"), {controller: "blog", action: "profile", id: publicacion.user_id}, :class=>"profile" %>
                 <%else%>
