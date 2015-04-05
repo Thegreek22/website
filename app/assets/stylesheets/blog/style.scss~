@@ -6,7 +6,7 @@
 /* -------------------------------
 	Foundation
 ------------------------------------*/
-@import 'foundation.css';
+@import url('foundation.css');
 
 /* -------------------------------
 	Google Fonts
@@ -20,18 +20,18 @@
 /* -------------------------------
 	Animate CSS
 ------------------------------------*/
-@import 'animate.css';
+@import url('blog/animate.css');
 
 /* -------------------------------
 	Timeline & Flexslider
 ------------------------------------*/
-@import 'timeline.css';
-@import 'flexslider.css';
+@import url('blog/timeline.css');
+@import url('blog/flexslider.css');
 
 /* -------------------------------
 	Mobile
 ------------------------------------*/
-@import 'mobile.css';
+@import url('blog/mobile.css');
 
 /* -------------------------------
 	Typography
