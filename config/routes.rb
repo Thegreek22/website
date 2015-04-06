@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get '/contacto' => 'welcome#contacto'
   get '/nosotros' => 'welcome#nosotros'
   get '/servicios' => 'welcome#servicios'
+  get '/equipo' => 'welcome#equipo'
   post '/correo' => 'welcome#enviarCorreo'
 
   # Example of regular route:
