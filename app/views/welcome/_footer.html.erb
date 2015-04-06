@@ -5,7 +5,9 @@
         <a href="index.html" class="logo push-bottom">
           <%= image_tag "welcome/logoBlanco.png", alt: "Bambú Mobile"%>
         </a>
-        <p>Somos una empresa de desarrollo de software, que busca trascender a través de la tecnología como herramienta de cambios reales y positivos <a href="#" class="btn-flat btn-xs">Ver Más <i class="fa fa-arrow-right"></i></a></p>
+        <p>Somos una empresa de desarrollo de software, que busca trascender a través de la tecnología como herramienta de cambios reales y positivos 
+          <%= link_to raw('Ver más <i class="fa fa-arrow-right"></i>'), {:controller => "welcome", :action => "nosotros"}, :class => "btn-flat btn-xs"%>
+        </p>
         <div class="contact-details">
           <ul class="contact">
             <li><p><i class="fa fa-map-marker"></i> <strong>Dirección:</strong> Paseo de la Reforma #36 Piso 2, Ciudad de México</p></li>
