@@ -24,7 +24,7 @@
               <p><%= @blogs.content%></p>
 
               <ul class="soc">
-                <%= link_to "contar", {controller: "blog", :action => "count"}, :id => @blogs.id%>
+                <%= link_to "contar", {controller: "blog", :action => "count", :id => @blogs.id}%>
               </ul>
 
               <h4>Comentarios:</h4>
