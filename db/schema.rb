@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20150329015612) do
     t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "count"
+    t.integer  "count"                   default: 0
   end
 
   create_table "users", force: :cascade do |t|
