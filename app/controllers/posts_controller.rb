@@ -34,7 +34,7 @@ class PostsController < InheritedResources::Base
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    #@post.update_attributes(:count=> 0)
+    @post.update_attributes(:count=> 0)
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
