@@ -20,7 +20,7 @@
             if (publicacion.count? || publicacion.count != 0)
               @votos = publicacion.count.to_s
             end%>
-            <%= link_to raw('<i class="fa fa-heart-o"></i>'), {controller: "blog", action: "count", id: publicacion.id}, :class=>"like" %>
+            <%= link_to raw('<i class="fa fa-heart-o"></i>' + @votos), {controller: "blog", action: "count", id: publicacion.id}, :class=>"like" %>
             <%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "entry-link"%>
             <%if publicacion.image.to_s == ''%>
               <%= image_tag "blog/categorias/#{Category.photo(publicacion.category_id)}", :alt => "", :class => "pub_photo"%>

@@ -17,7 +17,7 @@
                   if (publicacion.count? || publicacion.count != 0)
                     @votos = publicacion.count.to_s
                   end%>
-                <%= link_to raw('<i class="fa fa-heart-o"></i>#{@votos}'), {controller: "blog", action: "count", id: publicacion.id}, :class=>"like" %>
+                <%= link_to raw('<i class="fa fa-heart-o"></i>'+@votos), {controller: "blog", action: "count", id: publicacion.id}, :class=>"like" %>
                 <a href="blog.html"><%= image_tag @blogs.image%></a>
               </div>
             </div>
