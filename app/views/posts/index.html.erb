@@ -28,10 +28,9 @@
         <div class="item large-3 medium-6 small-12 columns category-<%= publicacion.category_id%>" data-equalizer-watch>
           <div class="recipe text-center">
             <div class="recipe-cover">
-              <a href="" class="like">
-                <i class="fa fa-heart-o"></i>
-                2054
-              </a>
+              <%= link_to "contar", {controller: "blog", :action => "count", :id => @blogs.id}, :class=>"like-it" do %>
+                  <i class="fa fa-heart-o"></i>
+                <% end %>
               <%= link_to publicacion.category.name, publicacion, class: "type"%>
               <%= link_to "", publicacion, class: "recipe-link"%>
               <%= image_tag publicacion.image, :alt => "" %>
