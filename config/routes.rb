@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :posts
+  get 'perfil' => 'post#perfil'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
