@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'blog/index'
   get 'blog/show'
-  get 'blog/count' 
+  get 'blog/count/:id' 
 
   get 'blog/categoria' => 'blog#category'
   get 'blog/articulo' => 'blog#entry'
