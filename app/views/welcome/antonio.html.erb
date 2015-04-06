@@ -8,7 +8,7 @@
 						<div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 420}'>
 							<ul>
 								<li data-transition="fade" data-slotamount="13" data-masterspeed="300" >
-									<img src="img/slides/header-about-me.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+									<%=image_tag "welcome/team/toño.jpg", alt: "omar", :"data-bgfit"=>"cover", :"data-bgposition"=>"left top", :"data-bgrepeat"=>"no-repeat"%>
 								</li>
 							</ul>
 						</div>
@@ -214,6 +214,6 @@
 				</div>
 
 			</div>
-		<%= render "blog/footer" %>
+		<%= render "welcome/footer" %>
 		</div>
-		<%= render "blog/scripts" %>
+		<%= render "welcome/scripts" %>
