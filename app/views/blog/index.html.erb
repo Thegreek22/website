@@ -55,10 +55,9 @@
                 <%else%>
                   <%= link_to image_tag(publicacion.user_photo), {controller: "blog", action: "profile", id: publicacion.user_id}, :class=>"profile" %>
                 <%end%>
-                <a href="" class="like">
+                <%= link_to "contar", {controller: "blog", :action => "count", :id => @blogs.id}, :class=>"like-it" do %>
                   <i class="fa fa-heart-o"></i>
-                  2054
-                </a>
+                <% end %>
                 <%= link_to publicacion.category.name, {controller: "blog", action: "show", id: publicacion}, class: "type"%>
                 <%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "recipe-link"%>
                 <%if publicacion.image.to_s == ''%>
