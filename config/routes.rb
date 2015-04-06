@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
 
   # Y aqui las del front
-  get 'welcome/index'
+  get '/index' => 'welcome#index'
   #       devise_for :users, controllers: {
   #         sessions: 'sessions'
   #       }
