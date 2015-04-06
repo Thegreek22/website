@@ -14,10 +14,10 @@
             <div class="large-12 medium-12 small-12 columns">
               <div class="entry-cover">
                 <% @votos = ""
-                  if (publicacion.count? || publicacion.count != 0)
-                    @votos = publicacion.count.to_s
+                  if (@blogs.count? || @blogs.count != 0)
+                    @votos = @blogs.count.to_s
                   end%>
-                <%= link_to raw('<i class="fa fa-heart-o"></i>'+@votos), {controller: "blog", action: "count", id: publicacion.id}, :class=>"like" %>
+                <%= link_to raw('<i class="fa fa-heart-o"></i>'+@votos), {controller: "blog", action: "count", id: @blogs.id}, :class=>"like" %>
                 <a href="blog.html"><%= image_tag @blogs.image%></a>
               </div>
             </div>
