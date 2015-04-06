@@ -16,7 +16,7 @@
         <!-- wpis -->
         <div class="item large-4 medium-6 small-12 columns">
           <div class="cover">
-            <%= link_to "contar", {controller: "blog", :action => "count", :id => publicacion.id}, :class=>"like-it" do %>
+            <%= link_to "contar", {controller: "blog", :action => "count", :id => publicacion.id, class: "like-it"} do %>
                   <i class="fa fa-heart-o"></i>
             <% end %>
             <%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "entry-link"%>

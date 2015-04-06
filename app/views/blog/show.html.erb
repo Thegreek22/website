@@ -13,7 +13,7 @@
           <div class="row">
             <div class="large-12 medium-12 small-12 columns">
               <div class="entry-cover">
-                <%= link_to "contar", {controller: "blog", :action => "count", :id => @blogs.id}, :class=>"like-it" do %>
+                <%= link_to "contar", {controller: "blog", :action => "count", :id => @blogs.id, :class=>"like-it"} do %>
                   <i class="fa fa-heart-o"></i>
                 <% end %>
                 <a href="blog.html"><%= image_tag @blogs.image%></a>
