@@ -16,9 +16,7 @@
         <!-- wpis -->
         <div class="item large-4 medium-6 small-12 columns">
           <div class="cover">
-            <%= link_to("contar", {controller: "blog", action: "count", id: publicacion.id}, :class=>"like-it") do %>
-                  <i class="fa fa-heart-o"></i>
-            <% end %>
+            <%= link_to raw('<i class="fa fa-heart-o"></i>'), {controller: "blog", action: "count", id: publicacion.id}, :class=>"like-it" %>
             <%= link_to "", {controller: "blog", action: "show", id: publicacion}, class: "entry-link"%>
             <%if publicacion.image.to_s == ''%>
               <%= image_tag "blog/categorias/#{Category.photo(publicacion.category_id)}", :alt => "", :class => "pub_photo"%>
