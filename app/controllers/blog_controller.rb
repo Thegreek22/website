@@ -16,8 +16,8 @@ class BlogController < ApplicationController
   end
 
   def count
-    cont = @blogs.count+1
-    @blogs.update_attributes(:count=> cont)
+    cont = @blogs[0].count+1
+    @blogs[0].update_attributes(:count=> cont)
   end
 
   def profile
