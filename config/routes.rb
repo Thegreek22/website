@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   get '/servicios' => 'welcome#servicios'
   get '/equipo' => 'welcome#equipo'
   post '/correo' => 'welcome#enviarCorreo'
+  get 'team/:member' => 'welcome#member'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
