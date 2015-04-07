@@ -13,8 +13,16 @@
 								<p class="short">Everything you need for your new website.</p>
 							</div>
 							<div class="portfolio-nav col-md-1">
-								<a href="portfolio-single.html" class="portfolio-nav-prev" rel="tooltip" data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
-								<a href="portfolio-single.html" class="portfolio-nav-next" rel="tooltip" data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
+								<% if (@premio.id.to_i - 1) == 0%>
+									<a href="/premios/3" class="portfolio-nav-prev" rel="tooltip" data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
+								<% else %>
+									<a href="/premios/<%=@premio.id.to_i - 1%>" class="portfolio-nav-prev" rel="tooltip" data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
+								<% end %>
+								<% if (@premio.id.to_i + 1) == 4%>
+									<a href="premios/1" class="portfolio-nav-next" rel="tooltip" data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
+								<% else %>
+									<a href="premios/<%=@premio.id.to_i + 1%>" class="portfolio-nav-next" rel="tooltip" data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
+								<% end %>
 							</div>
 						</div>
 					</div>
