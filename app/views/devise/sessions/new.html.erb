@@ -20,8 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 			<div class="form-text">
 				<%= f.email_field :email, autofocus: true, :class =>"text", :value =>"USERNAME", :onfocus =>"this.value = '';", :onblur=>"if (this.value == '') {this.value = 'USERNAME';}"%>
-				<input type="text" class="text" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" >
-				<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+				<%= f.password_field :password, autocomplete: "off", :value=>"Password", :onfocus=>"this.value = '';", :onblur=>"if (this.value == '') {this.value = 'Password';}" %>
 			</div>
 				<input type="submit"value="GO" >
 		<%end%>
