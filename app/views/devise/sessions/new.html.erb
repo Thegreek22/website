@@ -22,7 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<%= f.email_field :email, autofocus: true, :class =>"text", :value =>"USERNAME", :onfocus =>"this.value = '';", :onblur=>"if (this.value == '') {this.value = 'USERNAME';}"%>
 				<%= f.password_field :password, autocomplete: "off", :value=>"Password", :onfocus=>"this.value = '';", :onblur=>"if (this.value == '') {this.value = 'Password';}" %>
 			</div>
-				<input type="submit"value="GO" >
+				<%= f.submit "Ingresar" %>
 		<%end%>
 	</div>
 <!--/User-Login-->
