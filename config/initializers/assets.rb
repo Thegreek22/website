@@ -52,3 +52,4 @@ Rails.application.config.assets.precompile += %w( blog/jquery.flexslider-min.js 
 
 Rails.application.config.assets.precompile += %w( posts.css )
 Rails.application.config.assets.precompile += %w( posts.js )
+Rails.application.config.assets.precompile += %w( login/login.css )
