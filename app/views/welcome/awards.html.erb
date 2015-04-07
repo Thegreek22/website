@@ -6,7 +6,7 @@
 					<div class="portfolio-title">
 						<div class="row">
 							<div class="portfolio-nav-all col-md-1">
-								<a href="portfolio-single.html" rel="tooltip" data-original-title="Back to list"><i class="fa fa-th"></i></a>
+								<a href="http://www.bambu-mobile.com/nosotros" rel="tooltip" data-original-title="Regresa a la lista"><i class="fa fa-th"></i></a>
 							</div>
 							<div class="col-md-10 center">
 								<h2 class="shorter"><strong><%= @premio.nombre%></strong></h2>
@@ -14,12 +14,12 @@
 							</div>
 							<div class="portfolio-nav col-md-1">
 								<% if (@premio.id.to_i - 1) == 0%>
-									<a href="/premios/3" class="portfolio-nav-prev" rel="tooltip" data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
+									<a href="/premios/3" class="portfolio-nav-prev" rel="tooltip" data-original-title="Anterior"><i class="fa fa-chevron-left"></i></a>
 								<% else %>
 									<a href="/premios/<%=@premio.id.to_i - 1%>" class="portfolio-nav-prev" rel="tooltip" data-original-title="Previous"><i class="fa fa-chevron-left"></i></a>
 								<% end %>
 								<% if (@premio.id.to_i + 1) == 4%>
-									<a href="premios/1" class="portfolio-nav-next" rel="tooltip" data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
+									<a href="premios/1" class="portfolio-nav-next" rel="tooltip" data-original-title="Siguiente"><i class="fa fa-chevron-right"></i></a>
 								<% else %>
 									<a href="<%=@premio.id.to_i + 1%>" class="portfolio-nav-next" rel="tooltip" data-original-title="Next"><i class="fa fa-chevron-right"></i></a>
 								<% end %>
@@ -59,7 +59,7 @@
 							<h4>Descripcion del <strong>Proyecto</strong></h4>
 							<p class="taller"><%= @premio.descripcion%></p>
 
-							<a href="#" class="btn btn-primary btn-icon"><i class="fa fa-external-link"></i>Conoce el evento</a> <span class="arrow hlb" data-appear-animation="rotateInUpLeft" data-appear-animation-delay="800"></span>
+							<a href="<%= @premio.enlace%>" class="btn btn-primary btn-icon"><i class="fa fa-external-link"></i>Conoce el evento</a> <span class="arrow hlb" data-appear-animation="rotateInUpLeft" data-appear-animation-delay="800"></span>
 
 							<ul class="portfolio-details">
 								<li>
