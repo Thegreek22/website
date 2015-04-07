@@ -16,6 +16,7 @@ class WelcomeController < ApplicationController
   end
 
   def awards
+    @premio = Award.find(params[:id])
   end
 
   def robots
