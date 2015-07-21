@@ -18,7 +18,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   username: postgres
-  password: megayo00
+  password: BambuDevp.3
   host: localhost
   port: 5432
   # For details on connection pooling, see rails configuration guide
