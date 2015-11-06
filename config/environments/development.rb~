@@ -46,7 +46,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'bambu-mobile.com',
     user_name:            'webbambu@bambu-mobile.com',
-    password:             'webbambu123',
+    password:             'AlM7&94zf3.o',
     authentication:       'plain',
     enable_starttls_auto: true  }
 end
